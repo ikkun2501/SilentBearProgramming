@@ -3,16 +3,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M2'
+ //       classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M2'
     }
 }
 
-apply plugin: 'org.junit.platform.gradle.plugin'
-apply plugin: 'java-library'
+//apply plugin: 'org.junit.platform.gradle.plugin'
+//apply plugin: 'java-library'
+apply plugin: 'java'
+apply plugin: 'application'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 sourceCompatibility = targetCompatibility = '1.8'
 
+
+mainClassName="com.bunji.Example00"
 
 repositories {
     jcenter()
@@ -20,7 +24,7 @@ repositories {
 
 dependencies {
    compile 'org.riversun:slacklet:1.0.1'
-   testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M2")
-   testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M2")
+  // testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M2")
+   //testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M2")
 }
 
